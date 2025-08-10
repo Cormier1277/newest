@@ -15,7 +15,6 @@
       --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
 
-    /* Reset-ish */
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -28,17 +27,17 @@
       text-align: center;
     }
 
-    /* Lighter overlay (7% lighter than before) */
+    /* Lighter overlay: original +7%, now +5% more */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(12,16,20,0.38), rgba(12,16,20,0.58));
+      background: linear-gradient(to bottom, rgba(12,16,20,0.33), rgba(12,16,20,0.53));
       pointer-events: none;
     }
 
     .wrap {
-      position: relative; /* above overlay */
+      position: relative;
       min-height: 100%;
       display: grid;
       place-items: center;
@@ -51,21 +50,13 @@
       margin-inline: auto;
     }
 
-    /* Logo ~10% larger than prior clamp(220px, 28vw, 360px) */
+    /* Logo 10% larger than before */
     .logo {
       width: clamp(242px, 31vw, 396px);
       height: auto;
       display: block;
       margin: 0 auto clamp(16px, 2vh, 20px);
       filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
-    }
-
-    .tagline {
-      font-size: clamp(12px, 1.4vw, 14px);
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 clamp(10px, 1.2vh, 12px);
     }
 
     h1 {
@@ -135,8 +126,6 @@
   <div class="wrap">
     <main class="card" role="main">
       <img class="logo" src="assets/logo.png" alt="Xero Vector Systems logo" />
-
-      <p class="tagline">Xero Vector Systems</p>
 
       <h1>Under Development</h1>
 
