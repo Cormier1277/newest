@@ -1,150 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xero Vector Systems – Under Development</title>
-  <meta name="description" content="Xero Vector Systems — Drone Mapping, Surveying & Inspections. Launching October 2025." />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xero Vector Systems - Under Development</title>
   <style>
-    :root{
-      --text: #e9f1f7;
-      --muted: #b8c4cf;
-      --brand: #10b7ff;
-      --brand-dark: #0aa0e0;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-      color: var(--text);
-      background: url('assets/hero.jpg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .hero {
+      background: 
+        linear-gradient(
+          rgba(255,255,255,0.07),
+          rgba(255,255,255,0.07)
+        ),
+        url('assets/hero.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
       text-align: center;
+      padding: 20px;
     }
 
-    /* Lighter overlay: original +7%, now +5% more */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(12,16,20,0.33), rgba(12,16,20,0.53));
-      pointer-events: none;
-    }
-
-    .wrap {
-      position: relative;
-      min-height: 100%;
-      display: grid;
-      place-items: center;
-      padding: clamp(16px, 3vw, 40px);
-    }
-
-    .card {
-      text-align: center;
-      max-width: min(100%, 960px);
-      margin-inline: auto;
-    }
-
-    /* Logo 10% larger than before */
     .logo {
-      width: clamp(242px, 31vw, 396px);
+      max-width: 36.3%; /* 33% + 10% increase */
       height: auto;
-      display: block;
-      margin: 0 auto clamp(16px, 2vh, 20px);
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+      margin-bottom: 20px;
     }
 
     h1 {
-      margin: 0 0 clamp(14px, 2vh, 18px);
-      font-weight: 800;
-      line-height: 1.05;
-      font-size: clamp(32px, 6vw, 64px);
-      text-shadow: 0 2px 10px rgba(0,0,0,.35);
+      font-size: 2.5em;
+      margin: 0 0 10px;
     }
 
-    .sub {
-      margin: 0 auto clamp(18px, 2.5vh, 22px);
-      max-width: 900px;
-      line-height: 1.5;
-      color: var(--muted);
-      font-size: clamp(14px, 2.2vw, 18px);
+    p {
+      font-size: 1.2em;
+      margin: 5px 0;
     }
 
-    .launch {
-      color: var(--muted);
-      margin: 0 0 clamp(16px, 2vh, 20px);
-      font-size: clamp(13px, 1.9vw, 16px);
-    }
-
-    .cta {
-      display: inline-block;
-      padding: clamp(12px, 1.8vh, 14px) clamp(22px, 3.5vw, 28px);
-      border-radius: 999px;
-      background: var(--brand);
-      color: #06131a;
-      font-weight: 700;
-      font-size: clamp(14px, 2.4vw, 18px);
+    .email-button {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
       text-decoration: none;
-      box-shadow: var(--shadow);
-      transform: translateZ(0);
-      transition: filter .15s ease, transform .15s ease, box-shadow .15s ease;
-    }
-    .cta:hover { filter: brightness(1.06); box-shadow: 0 14px 36px rgba(0,0,0,.45); }
-    .cta:active { transform: scale(.98); background: var(--brand-dark); }
-
-    .email {
-      margin-top: clamp(14px, 2vh, 20px);
-      color: var(--text);
-      text-decoration: none;
-      font-size: clamp(13px, 2vw, 16px);
+      font-size: 1.2em;
+      margin-top: 20px;
       display: inline-block;
     }
-    .email:hover { text-decoration: underline; }
+
+    .email-button:hover {
+      background-color: #0088cc;
+    }
 
     footer {
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
       text-align: center;
-      padding: 10px 12px;
-      color: var(--muted);
-      font-size: 12px;
-      backdrop-filter: blur(4px);
-      background: rgba(6,12,16,.35);
+      color: white;
+      font-size: 0.9em;
     }
 
-    @media (max-width: 380px){
-      .cta { width: 100%; }
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 66%; /* 60% + 10% increase */
+      }
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <main class="card" role="main">
-      <img class="logo" src="assets/logo.png" alt="Xero Vector Systems logo" />
 
-      <h1>Under Development</h1>
-
-      <p class="sub">
-        Drone Mapping, Surveying &amp; Inspections — Solutions for Construction, Solar &amp; Agriculture
-      </p>
-
-      <p class="launch">Rehoboth Beach, DE 19971 &bull; Launching October 2025</p>
-
-      <p>
-        <a class="cta" href="mailto:kevin@xerovectorsystems.com?subject=Inquiry%20from%20website&body=Hi%20Xero%20Vector%20Systems%2C%0A%0A">
-          Email Us
-        </a>
-      </p>
-
-      <a class="email" href="mailto:kevin@xerovectorsystems.com">kevin@xerovectorsystems.com</a>
-    </main>
+  <div class="hero">
+    <img src="assets/logo.png" alt="Xero Vector Systems Logo" class="logo">
+    <h1>Under Development</h1>
+    <p>Drone Mapping, Surveying & Inspections — Solutions for Construction, Solar & Agriculture</p>
+    <p>Rehoboth Beach, DE 19971 • Launching October 2025</p>
+    <a href="mailto:kevin@xerovectorsystems.com" class="email-button">Email Us</a>
+    <p>kevin@xerovectorsystems.com</p>
+    <footer>
+      &copy; 2025 Xero Vector Systems
+    </footer>
   </div>
 
-  <footer>&copy; 2025 Xero Vector Systems</footer>
 </body>
 </html>
