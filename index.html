@@ -11,17 +11,26 @@
             background: url('assets/hero.jpg') no-repeat center center fixed;
             background-size: cover;
             filter: brightness(1.1); /* 10% brighter */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            min-height: 100vh;              /* allow page to grow on mobile */
+            display: flex;                  /* column layout */
+            flex-direction: column;
             color: white;
             text-align: center;
+        }
+
+        /* Center the main content vertically, keep footer at bottom */
+        .main {
+            flex: 1;                        /* take remaining space */
+            display: flex;
             flex-direction: column;
+            justify-content: center;        /* vertical centering of content */
+            align-items: center;
+            padding: 16px;
         }
 
         .logo {
             width: 435px; /* 15% bigger than 379px */
+            max-width: 90vw;               /* prevent overflow on small screens */
             margin-bottom: 20px;
         }
 
@@ -52,21 +61,30 @@
             background-color: #0088cc;
         }
 
+        /* Footer sits after .main; no absolute positioning */
         footer {
-            position: absolute;
-            bottom: 10px;
             font-size: 0.9em;
             color: #ccc;
+            padding: 10px 0;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2em; }
+            p  { font-size: 1.05em; }
         }
     </style>
 </head>
 <body>
-    <img src="assets/logo.png" alt="Xero Vector Systems logo" class="logo">
-    <h1>Under Development</h1>
-    <p>Drone Mapping, Surveying & Inspections — Solutions for Construction, Solar & Agriculture<br>
-       Rehoboth Beach, DE 19971 • Launching October 2025</p>
-    <a href="mailto:kevin@xerovectorsystems.com" class="email-button">Email Us</a>
-    <p>kevin@xerovectorsystems.com</p>
+    <div class="main">
+        <img src="assets/logo.png" alt="Xero Vector Systems logo" class="logo">
+        <h1>Under Development</h1>
+        <p>Drone Mapping, Surveying & Inspections — Solutions for Construction, Solar & Agriculture<br>
+           Rehoboth Beach, DE 19971 • Launching October 2025</p>
+        <a href="mailto:kevin@xerovectorsystems.com" class="email-button">Email Us</a>
+        <p>kevin@xerovectorsystems.com</p>
+    </div>
+
     <footer>© 2025 Xero Vector Systems</footer>
 </body>
 </html>
