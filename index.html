@@ -1,101 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xero Vector Systems - Under Development</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xero Vector Systems – Under Development</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('assets/hero.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(1.1); /* 10% brighter */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
 
-    .hero {
-      background: 
-        linear-gradient(
-          rgba(255,255,255,0.07),
-          rgba(255,255,255,0.07)
-        ),
-        url('assets/hero.jpg') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+        .logo {
+            width: 435px; /* 15% bigger than 379px */
+            margin-bottom: 20px;
+        }
 
-    .logo {
-      max-width: 36.3%; /* 33% + 10% increase */
-      height: auto;
-      margin-bottom: 20px;
-    }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
 
-    h1 {
-      font-size: 2.5em;
-      margin: 0 0 10px;
-    }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+        }
 
-    p {
-      font-size: 1.2em;
-      margin: 5px 0;
-    }
+        .email-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1em;
+            color: white;
+            background-color: #00aaff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
 
-    .email-button {
-      background-color: #00aaff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 25px;
-      text-decoration: none;
-      font-size: 1.2em;
-      margin-top: 20px;
-      display: inline-block;
-    }
+        .email-button:hover {
+            background-color: #0088cc;
+        }
 
-    .email-button:hover {
-      background-color: #0088cc;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      color: white;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-      .logo {
-        max-width: 66%; /* 60% + 10% increase */
-      }
-      h1 {
-        font-size: 2em;
-      }
-      p {
-        font-size: 1em;
-      }
-    }
-  </style>
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="hero">
-    <img src="assets/logo.png" alt="Xero Vector Systems Logo" class="logo">
+    <img src="assets/logo.png" alt="Xero Vector Systems logo" class="logo">
     <h1>Under Development</h1>
-    <p>Drone Mapping, Surveying & Inspections — Solutions for Construction, Solar & Agriculture</p>
-    <p>Rehoboth Beach, DE 19971 • Launching October 2025</p>
+    <p>Drone Mapping, Surveying & Inspections — Solutions for Construction, Solar & Agriculture<br>
+       Rehoboth Beach, DE 19971 • Launching October 2025</p>
     <a href="mailto:kevin@xerovectorsystems.com" class="email-button">Email Us</a>
     <p>kevin@xerovectorsystems.com</p>
-    <footer>
-      &copy; 2025 Xero Vector Systems
-    </footer>
-  </div>
-
+    <footer>© 2025 Xero Vector Systems</footer>
 </body>
 </html>
